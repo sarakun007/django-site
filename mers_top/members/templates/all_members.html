@@ -11,7 +11,7 @@ Students
     <ul>
         {% for x in page_obj %}
         <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}
-            <img src="{{x.photo.url}}" alt="Картинка" width="200" height="200"></li>
+            <img src="{{x.photo.url}}" alt="Картинка" width="170" height="200"></li>
         {% endfor %}
 
     </ul>
