@@ -1,0 +1,16 @@
+<!-- photo.html -->
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'note.css' %}">
+<html>
+<head>
+    <title>Photo Page</title>
+</head>
+<body>
+{% for x in mydata%}
+        <li>{{ x.firstname }} {{ x.lastname }} </li>
+        <img src="{{x.photo.url}}" alt="Картинка" width="300" height="300">
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block title %}
+Students
+{% endblock %}
+
+
+{% block content %}
+<div class="mycard">
+    <h1>Students</h1>
+    <ul>
+        {% for x in page_obj %}
+        <li onclick="window.location = 'details/{{ x.id }}'">{{ x.firstname }} {{ x.lastname }}
+            <img src="{{x.photo.url}}" alt="Картинка" width="200" height="200"></li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+<nav>
+  <ul>
+    {% for p in page_obj.paginator.page_range %}
+    <li>
+      <a href="?page={{p}}"> Page number: {{p}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% endblock %}

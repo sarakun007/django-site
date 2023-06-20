@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+Item
+{% endblock %}
+
+{% block content %}
+<div class="mycard">
+    <h1 align="center">Item Price</h1>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    {% for kn in kn_pr %}
+    <p>{{kn}}</p>
+    {% endfor %}
+    </body>
+    </html>
+    {% endblock %}
